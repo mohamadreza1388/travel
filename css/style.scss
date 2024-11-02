@@ -1,0 +1,283 @@
+@import "normalize.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css";
+@import "../node_modules/swiper/swiper-bundle.min.css";
+@import "fontawesome.min.css";
+@import "brands.css";
+@import "solid.css";
+
+@mixin font($name,$weight,$url,$format) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    src: url($url) format($format);
+  }
+}
+
+@include font("iranyekan", 100, "../fonts/iranyekan/Qs_Iranyekan thin.ttf", "truetype"); // initial
+@include font("iranyekan", 200, "../fonts/iranyekan/Qs_Iranyekan light.ttf", "truetype"); // lighter
+@include font("iranyekan", 400, "../fonts/iranyekan/Qs_Iranyekan.ttf", "truetype"); // normal
+@include font("iranyekan", 700, "../fonts/iranyekan/Qs_Iranyekan bold.ttf", "truetype"); //bold
+@include font("iranyekan", 750, "../fonts/iranyekan/Qs_Iranyekan black.ttf", "truetype"); //black
+@include font("iranyekan", 800, "../fonts/iranyekan/Qs_Iranyekan extrabold.ttf", "truetype"); //extraBold
+@include font("iranyekan", 900, "../fonts/iranyekan/Qs_Iranyekan extrablack.ttf", "truetype"); //extraBlack
+@include font("iranyekan-n", 400, "../fonts/iranyekan_numbers/ttf/iranyekanwebregular(fanum).ttf", "truetype");
+@include font("iranyekan-n", 700, "../fonts/iranyekan_numbers/ttf/iranyekanwebbold(fanum).ttf", "truetype");
+
+//font-weight : normal => 400;
+//font-weight : bold => 700;
+//parent-weight  bolder  lighter
+//     100        400      100
+//     200        400      100
+//     300        400      100
+//     400        700      100
+//     500        700      100
+//     600        900      400
+//     700        900      400
+//     800        900      700
+//     900        900      700
+
+$color1: #5D50C6;
+$color2: #F05B9A;
+$color3: #39A0FF;
+$color4: #F6F5F5;
+$color5: #FBFBFB;
+$color6: #FACD49;
+
+* {
+  box-sizing: border-box;
+  font-family: "iranyekan", sans-serif;
+}
+
+body {
+  direction: rtl;
+  display: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.font-n {
+  font-family: iranyekan-n, iranyekan, sans-serif;
+}
+
+.bg-1 {
+  background-color: $color1;
+}
+
+.bg-2 {
+  background-color: $color2;
+}
+
+.bg-3 {
+  background-color: $color3;
+}
+
+.bg-4 {
+  background-color: $color4;
+}
+
+.bg-5 {
+  background-color: $color5;
+}
+
+.bg-6 {
+  background-color: $color6;
+}
+
+.color-1 {
+  color: $color1;
+}
+
+.color-2 {
+  color: $color2;
+}
+
+.rounded-6 {
+  border-radius: 50%;
+}
+
+.container {
+  padding: 0;
+}
+.logo {
+  a:link,
+  a:visited {
+    color: transparent;
+
+    h2 {
+      font-weight: 800 !important;
+      word-spacing: -8px;
+      background-image: linear-gradient(90deg, $color1, $color2 50%);
+      background-clip: text;
+      background-size: 100% 100%;
+    }
+  }
+}
+.top-header {
+  height: 80px;
+  .top-nav {
+    ul {
+      list-style-type: none;
+
+      li {
+        a:link,
+        a:visited {
+          font-weight: 200;
+          word-spacing: -4px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+
+.btn2,
+.btn1 {
+  font-size: 15px;
+  border-radius: 98px;
+}
+
+.btn2 {
+  box-shadow: 0 10px 35px -12px $color1;
+  transition: all 500ms;
+
+  &:hover {
+    box-shadow: 0 5px 18px -8px $color1;
+  }
+}
+
+.world-explore {
+  box-shadow: 0 20px 50px -24px $color2;
+}
+
+.top-box {
+  box-shadow: 0 20px 61px -19px $color2;
+}
+
+main .circle {
+  box-shadow: -203px 41px 290px -213px $color2,
+  504px 97px 389px -198px $color1;
+}
+
+.btn-shadow {
+  box-shadow: 1px 13px 30px -10px $color1,
+  0px 48px 42px -11px $color1;
+}
+
+main, #experience {
+  background-image: url("../images/earth-Vector.png");
+  background-repeat: no-repeat;
+  background-position: -60px 371px;
+}
+
+.swiper {
+  padding: 5px 0 16px 16px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: static;
+  left: auto;
+  top: auto;
+
+  &::after {
+    content: "";
+  }
+}
+
+.destinations {
+  transition: all 300ms;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .img-wrapper {
+    img {
+      width: 101%;
+    }
+
+    box-shadow: -11px 22px 45px -30px $color1;
+  }
+
+  .card-text {
+    line-height: 1.6;
+  }
+
+  .card-footer {
+    border-radius: 5px 5px 25px 25px;
+  }
+
+  .btn3 {
+    background-image: linear-gradient(135deg, #8482FF 0%, #7723FE 100%);
+    box-shadow: -12px 11px 34px -8px $color1;
+    font-size: 14px;
+
+    &:hover {
+      background-image: linear-gradient(0deg, #8482FF 0%, #7723FE 100%);
+    }
+  }
+
+  .satisfaction {
+    i {
+      color: gold;
+    }
+
+    background-color: rgba(83, 83, 83, 0.22);
+    backdrop-filter: blur(50px);
+
+  }
+}
+
+.filter-link:link,
+.filter-link:visited {
+  color: grey;
+  font-size: 17px;
+
+  &.active {
+    color: black;
+    font-weight: bold;
+  }
+
+}
+
+ul.filter li:last-child a.filter-link:link,
+ul.filter li:last-child a.filter-link:visited {
+  color: $color2;
+  border-bottom: 1px solid $color2;
+}
+
+#destination2 {
+  .destination {
+    .destinations {
+      flex-basis: 31%;
+    }
+  }
+}
+
+#meet {
+  .address{
+    background-color: rgba(255, 255, 255, 0.32);
+    backdrop-filter: blur(100px);
+  }
+}
+
+.newsletter-form{
+  input[type="email"]{
+    width: calc(100% - 45px);
+    &:focus{
+      outline: 0;
+    }
+    &::placeholder{
+      float: right;
+    }
+  }
+}
+
+#bottom-menu{
+  display: none;
+}

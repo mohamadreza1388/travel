@@ -1,0 +1,263 @@
+@import "normalize.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css";
+@import "../node_modules/swiper/swiper-bundle.min.css";
+@import "fontawesome.min.css";
+@import "brands.css";
+@import "solid.css";
+@font-face {
+  font-family: "iranyekan";
+  font-weight: 100;
+  src: url("../fonts/iranyekan/Qs_Iranyekan thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iranyekan";
+  font-weight: 200;
+  src: url("../fonts/iranyekan/Qs_Iranyekan light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iranyekan";
+  font-weight: 400;
+  src: url("../fonts/iranyekan/Qs_Iranyekan.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iranyekan";
+  font-weight: 700;
+  src: url("../fonts/iranyekan/Qs_Iranyekan bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iranyekan";
+  font-weight: 750;
+  src: url("../fonts/iranyekan/Qs_Iranyekan black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iranyekan";
+  font-weight: 800;
+  src: url("../fonts/iranyekan/Qs_Iranyekan extrabold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iranyekan";
+  font-weight: 900;
+  src: url("../fonts/iranyekan/Qs_Iranyekan extrablack.ttf") format("truetype");
+}
+@font-face {
+  font-family: "iranyekan-n";
+  font-weight: 400;
+  src: url("../fonts/iranyekan_numbers/ttf/iranyekanwebregular(fanum).ttf") format("truetype");
+}
+@font-face {
+  font-family: "iranyekan-n";
+  font-weight: 700;
+  src: url("../fonts/iranyekan_numbers/ttf/iranyekanwebbold(fanum).ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  font-family: "iranyekan", sans-serif;
+}
+
+body {
+  direction: rtl;
+  display: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.font-n {
+  font-family: iranyekan-n, iranyekan, sans-serif;
+}
+
+.bg-1 {
+  background-color: #5D50C6;
+}
+
+.bg-2 {
+  background-color: #F05B9A;
+}
+
+.bg-3 {
+  background-color: #39A0FF;
+}
+
+.bg-4 {
+  background-color: #F6F5F5;
+}
+
+.bg-5 {
+  background-color: #FBFBFB;
+}
+
+.bg-6 {
+  background-color: #FACD49;
+}
+
+.color-1 {
+  color: #5D50C6;
+}
+
+.color-2 {
+  color: #F05B9A;
+}
+
+.rounded-6 {
+  border-radius: 50%;
+}
+
+.container {
+  padding: 0;
+}
+
+.logo a:link,
+.logo a:visited {
+  color: transparent;
+}
+.logo a:link h2,
+.logo a:visited h2 {
+  font-weight: 800 !important;
+  word-spacing: -8px;
+  background-image: linear-gradient(90deg, #5D50C6, #F05B9A 50%);
+  background-clip: text;
+  background-size: 100% 100%;
+}
+
+.top-header {
+  height: 80px;
+}
+.top-header .top-nav ul {
+  list-style-type: none;
+}
+.top-header .top-nav ul li a:link,
+.top-header .top-nav ul li a:visited {
+  font-weight: 200;
+  word-spacing: -4px;
+  font-size: 18px;
+}
+
+.btn2,
+.btn1 {
+  font-size: 15px;
+  border-radius: 98px;
+}
+
+.btn2 {
+  box-shadow: 0 10px 35px -12px #5D50C6;
+  transition: all 500ms;
+}
+.btn2:hover {
+  box-shadow: 0 5px 18px -8px #5D50C6;
+}
+
+.world-explore {
+  box-shadow: 0 20px 50px -24px #F05B9A;
+}
+
+.top-box {
+  box-shadow: 0 20px 61px -19px #F05B9A;
+}
+
+main .circle {
+  box-shadow: -203px 41px 290px -213px #F05B9A, 504px 97px 389px -198px #5D50C6;
+}
+
+.btn-shadow {
+  box-shadow: 1px 13px 30px -10px #5D50C6, 0px 48px 42px -11px #5D50C6;
+}
+
+main, #experience {
+  background-image: url("../images/earth-Vector.png");
+  background-repeat: no-repeat;
+  background-position: -60px 371px;
+}
+
+.swiper {
+  padding: 5px 0 16px 16px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: static;
+  left: auto;
+  top: auto;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.destinations {
+  transition: all 300ms;
+}
+.destinations:hover {
+  transform: translateY(-5px);
+}
+.destinations .img-wrapper {
+  box-shadow: -11px 22px 45px -30px #5D50C6;
+}
+.destinations .img-wrapper img {
+  width: 101%;
+}
+.destinations .card-text {
+  line-height: 1.6;
+}
+.destinations .card-footer {
+  border-radius: 5px 5px 25px 25px;
+}
+.destinations .btn3 {
+  background-image: linear-gradient(135deg, #8482FF 0%, #7723FE 100%);
+  box-shadow: -12px 11px 34px -8px #5D50C6;
+  font-size: 14px;
+}
+.destinations .btn3:hover {
+  background-image: linear-gradient(0deg, #8482FF 0%, #7723FE 100%);
+}
+.destinations .satisfaction {
+  background-color: rgba(83, 83, 83, 0.22);
+  backdrop-filter: blur(50px);
+}
+.destinations .satisfaction i {
+  color: gold;
+}
+
+.filter-link:link,
+.filter-link:visited {
+  color: grey;
+  font-size: 17px;
+}
+.filter-link:link.active,
+.filter-link:visited.active {
+  color: black;
+  font-weight: bold;
+}
+
+ul.filter li:last-child a.filter-link:link,
+ul.filter li:last-child a.filter-link:visited {
+  color: #F05B9A;
+  border-bottom: 1px solid #F05B9A;
+}
+
+#destination2 .destination .destinations {
+  flex-basis: 31%;
+}
+
+#meet .address {
+  background-color: rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(100px);
+}
+
+.newsletter-form input[type=email] {
+  width: calc(100% - 45px);
+}
+.newsletter-form input[type=email]:focus {
+  outline: 0;
+}
+.newsletter-form input[type=email]::placeholder {
+  float: right;
+}
+
+#bottom-menu {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
